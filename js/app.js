@@ -11,6 +11,10 @@ let inputUsd = document.querySelector(".input-usd");
 let finishBtn = document.querySelector(".finish-btn");
 let chosedUser = document.querySelector(".choseduser");
 let thirdPage = document.querySelector(".third-page");
+let finishPage = document.querySelector(".ssecssesfuly-wrapper");
+let makeMorePayment = document.querySelector(".make-more-btn");
+let countUsd = document.querySelector(".count-usd");
+let sendingUser = document.querySelector(".sending-user");
 
 inputUsd.addEventListener("keypress", (e) => {
   if (
@@ -31,12 +35,34 @@ inputUsd.addEventListener("keypress", (e) => {
   }
 });
 
+makeMorePayment.addEventListener("click", () => {
+  loader.classList.remove("hidden");
+  finishPage.classList.add("hidden");
+  setTimeout(() => {
+    loader.classList.add("hidden");
+    secondPage.classList.remove("hidden");
+  }, 1000);
+});
+
+finishBtn.addEventListener("click", () => {
+  thirdPage.classList.add("hidden");
+  loader.classList.remove("hidden");
+  countUsd.innerHTML = `$${inputUsd.value}`;
+  sendingUser.innerHTML = `@${input.value}`;
+  input.value = "";
+  inputUsd.value = "";
+  setTimeout(() => {
+    loader.classList.add("hidden");
+    finishPage.classList.remove("hidden");
+  }, 1000);
+});
+
 btn.addEventListener("click", () => {
   chosedUser.innerHTML = `@${input.value}`;
   secondPage.classList.add("hidden");
+  finishPage.classList.add("hidden");
   loader.classList.remove("hidden");
-  input.value = "";
-  inputUsd.value = "";
+
   setTimeout(() => {
     thirdPage.classList.remove("hidden");
     loader.classList.add("hidden");
@@ -46,6 +72,7 @@ btn.addEventListener("click", () => {
 sendAndRequest.addEventListener("click", () => {
   sendAndRequest.classList.add("active");
   thirdPage.classList.add("hidden");
+  finishPage.classList.add("hidden");
   dashboard.classList.remove("active");
   mainPage.classList.add("hidden");
   loader.classList.remove("hidden");
@@ -60,6 +87,7 @@ sendAndRequest.addEventListener("click", () => {
 dashboard.addEventListener("click", () => {
   dashboard.classList.add("active");
   thirdPage.classList.add("hidden");
+  finishPage.classList.add("hidden");
   sendAndRequest.classList.remove("active");
   secondPage.classList.add("hidden");
   loader.classList.remove("hidden");
@@ -74,6 +102,7 @@ dashboard.addEventListener("click", () => {
 transferFoundBtn.addEventListener("click", () => {
   sendAndRequest.classList.add("active");
   thirdPage.classList.add("hidden");
+  finishPage.classList.add("hidden");
   dashboard.classList.remove("active");
   mainPage.classList.add("hidden");
   loader.classList.remove("hidden");
@@ -88,6 +117,7 @@ transferFoundBtn.addEventListener("click", () => {
 sendMoneyBtn.addEventListener("click", () => {
   sendAndRequest.classList.add("active");
   thirdPage.classList.add("hidden");
+  finishPage.classList.add("hidden");
   dashboard.classList.remove("active");
   mainPage.classList.add("hidden");
   loader.classList.remove("hidden");
