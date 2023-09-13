@@ -15,6 +15,9 @@ let finishPage = document.querySelector(".ssecssesfuly-wrapper");
 let makeMorePayment = document.querySelector(".make-more-btn");
 let countUsd = document.querySelector(".count-usd");
 let sendingUser = document.querySelector(".sending-user");
+let balance = document.querySelector(".balance");
+let balanceCount = 478152000;
+let count = 0;
 
 inputUsd.addEventListener("keypress", (e) => {
   if (
@@ -40,11 +43,20 @@ makeMorePayment.addEventListener("click", () => {
   finishPage.classList.add("hidden");
   setTimeout(() => {
     loader.classList.add("hidden");
-    secondPage.classList.remove("hidden");
+    mainPage.classList.remove("hidden");
   }, 1000);
 });
 
 finishBtn.addEventListener("click", () => {
+  let numberValue = 0;
+  numberValue = inputUsd.value;
+  if (balanceCount < numberValue) {
+    balance.innerHTML = "0";
+  } else {
+    count = balanceCount - parseInt(numberValue);
+    balanceCount = balanceCount - parseInt(numberValue);
+    balance.innerHTML = `$${count.toLocaleString()}`;
+  }
   thirdPage.classList.add("hidden");
   loader.classList.remove("hidden");
   countUsd.innerHTML = `$${inputUsd.value}`;
