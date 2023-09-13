@@ -196,6 +196,9 @@ input.addEventListener("keypress", (e) => {
     e.key === "N" ||
     e.key === "M" ||
     e.key === "@" ||
+    e.key === "-" ||
+    e.key === "_" ||
+    e.key === "." ||
     e.key === "1" ||
     e.key === "2" ||
     e.key === "3" ||
