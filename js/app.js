@@ -7,12 +7,50 @@ let loader = document.querySelector(".loader");
 let transferFoundBtn = document.querySelector(".transfer-btn");
 let dashboard = document.querySelector(".dashboard");
 let sendAndRequest = document.querySelector(".send-and-request");
+let inputUsd = document.querySelector(".input-usd");
+let finishBtn = document.querySelector(".finish-btn");
+let chosedUser = document.querySelector(".choseduser");
+let thirdPage = document.querySelector(".third-page");
+
+inputUsd.addEventListener("keypress", (e) => {
+  if (
+    e.key === "1" ||
+    e.key === "2" ||
+    e.key === "3" ||
+    e.key === "4" ||
+    e.key === "5" ||
+    e.key === "6" ||
+    e.key === "7" ||
+    e.key === "8" ||
+    e.key === "9" ||
+    e.key === "0"
+  ) {
+    finishBtn.classList.add("active");
+  } else {
+    finishBtn.classList.remove("active");
+  }
+});
+
+btn.addEventListener("click", () => {
+  chosedUser.innerHTML = `@${input.value}`;
+  secondPage.classList.add("hidden");
+  loader.classList.remove("hidden");
+  input.value = "";
+  inputUsd.value = "";
+  setTimeout(() => {
+    thirdPage.classList.remove("hidden");
+    loader.classList.add("hidden");
+  }, 1000);
+});
 
 sendAndRequest.addEventListener("click", () => {
   sendAndRequest.classList.add("active");
+  thirdPage.classList.add("hidden");
   dashboard.classList.remove("active");
   mainPage.classList.add("hidden");
   loader.classList.remove("hidden");
+  input.value = "";
+  inputUsd.value = "";
   setTimeout(() => {
     loader.classList.add("hidden");
     secondPage.classList.remove("hidden");
@@ -21,9 +59,12 @@ sendAndRequest.addEventListener("click", () => {
 
 dashboard.addEventListener("click", () => {
   dashboard.classList.add("active");
+  thirdPage.classList.add("hidden");
   sendAndRequest.classList.remove("active");
   secondPage.classList.add("hidden");
   loader.classList.remove("hidden");
+  input.value = "";
+  inputUsd.value = "";
   setTimeout(() => {
     loader.classList.add("hidden");
     mainPage.classList.remove("hidden");
@@ -32,9 +73,12 @@ dashboard.addEventListener("click", () => {
 
 transferFoundBtn.addEventListener("click", () => {
   sendAndRequest.classList.add("active");
+  thirdPage.classList.add("hidden");
   dashboard.classList.remove("active");
   mainPage.classList.add("hidden");
   loader.classList.remove("hidden");
+  input.value = "";
+  inputUsd.value = "";
   setTimeout(() => {
     loader.classList.add("hidden");
     secondPage.classList.remove("hidden");
@@ -43,9 +87,12 @@ transferFoundBtn.addEventListener("click", () => {
 
 sendMoneyBtn.addEventListener("click", () => {
   sendAndRequest.classList.add("active");
+  thirdPage.classList.add("hidden");
   dashboard.classList.remove("active");
   mainPage.classList.add("hidden");
   loader.classList.remove("hidden");
+  input.value = "";
+  inputUsd.value = "";
   setTimeout(() => {
     loader.classList.add("hidden");
     secondPage.classList.remove("hidden");
