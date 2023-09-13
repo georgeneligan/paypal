@@ -1,0 +1,403 @@
+@font-face {
+  font-family: pypfont;
+  src: url(../assets/Fonts/PayPalSansBig-Light-Klim.woff);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: pypfont;
+}
+.hidden {
+  display: none !important;
+}
+
+header {
+  background-color: #142c8e;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header aside {
+  display: flex;
+}
+
+.logo-img {
+  width: 120px;
+  cursor: pointer;
+}
+
+header .left ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+header .left ul li {
+  color: rgb(201, 221, 224);
+  font-family: pypfont;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+header .right ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  color: rgb(201, 221, 224);
+}
+header .right ul li {
+  cursor: pointer;
+}
+
+.logout {
+  font-family: pypfont;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+header .right {
+  margin-right: 40px;
+}
+
+header .right ul li i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.second-active {
+  color: #0079c1 !important;
+}
+
+.active {
+  background-color: #4558a5;
+  border-radius: 25px;
+  padding: 10px;
+  color: white !important;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 60% 2fr;
+  width: 100%;
+  margin-top: 50px;
+}
+
+main aside {
+  height: fit-content;
+  font-family: pypfont;
+}
+
+main .main-left {
+  padding-left: 150px;
+}
+
+.godm {
+  color: rgb(64, 64, 64);
+  font-size: 33px;
+}
+
+.ballance-wrapper {
+  margin-left: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px 0px rgb(189, 188, 188);
+  padding: 20px;
+}
+
+.title-h4 {
+  color: #0079c1;
+  font-weight: 1000;
+  font-size: 18px;
+}
+
+.balance {
+  font-size: 40px;
+  color: rgb(134, 134, 134);
+  margin-top: 20px;
+}
+
+.currencies {
+  color: rgb(157, 157, 157);
+}
+
+.transfer-btn-wrapper {
+  margin-top: 30px;
+}
+
+.transfer-btn {
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #0079c1;
+  font-size: 15px;
+  border: 1px solid #0079c1;
+  border-radius: 20px;
+  background-color: transparent;
+  font-weight: 1000;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.transfer-btn:hover {
+  background-color: #00457c;
+  color: white;
+}
+
+.top-menu {
+  display: flex;
+  margin-left: 50px;
+  gap: 70px;
+  text-align: center;
+}
+
+.top-menu div img {
+  width: 70px;
+  cursor: pointer;
+}
+
+.top-menu div p {
+  font-weight: 1000;
+}
+
+.send-again-wrapper {
+  margin-left: 50px;
+  margin-top: 50px;
+  box-shadow: 0px 2px 5px 0px rgb(189, 188, 188);
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+}
+.reacent-activity-wrapper {
+  padding: 20px;
+  margin-left: 50px;
+  box-shadow: 0px 3px 5px 0px rgb(189, 188, 188);
+  border-radius: 10px;
+  width: 80%;
+  height: 400px;
+  max-height: 96%;
+  overflow: auto;
+}
+
+.send-again {
+  display: flex;
+  justify-content: space-between;
+  color: #0079c1;
+  font-weight: 1000;
+  font-size: 18px;
+}
+
+.users-wrapper {
+  display: flex;
+}
+.newuser {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  text-align: ccenter;
+
+  width: 100px;
+  margin-top: 20px;
+}
+.avatar {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  text-align: center;
+  place-items: center;
+  margin-bottom: 8px;
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15%;
+}
+
+.avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.recent {
+  color: #0079c1;
+  font-weight: 1000;
+  font-size: 18px;
+}
+
+.recent-history {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sen-avatar {
+  width: 70px;
+  height: 70px;
+}
+
+.hist-img {
+  display: flex;
+  gap: 10px;
+}
+
+.pyp-balance {
+  color: #565555;
+}
+
+.transfer-using {
+  color: #9d9d9d;
+}
+
+.sending {
+  color: #565555;
+}
+
+.second-page {
+  width: 100%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 60% 2fr;
+  place-items: center;
+  justify-content: space-between;
+}
+
+.second-page aside {
+  width: fit-content;
+}
+
+.second-right {
+  position: absolute;
+  left: 57%;
+}
+
+.second-left {
+  width: 60% !important;
+  margin-left: 200px;
+}
+
+.second-left ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  font-size: 23px;
+  color: #00457c;
+  font-weight: 1000;
+  margin-left: 60px;
+}
+
+.second-left ul li {
+  cursor: pointer;
+}
+
+.send-payment-to-title {
+  margin-top: 50px;
+  font-size: 30px;
+  color: #222222;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: solid 2px #0c97e8;
+  box-shadow: 0px 0px 5px 2px #6ac0f2;
+  width: 100%;
+  height: 60px;
+  border-radius: 40px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.email {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: transparent;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.fa-magnifying-glass {
+  color: #9d9d9d;
+}
+
+.next-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  margin-top: 40px;
+  border: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 3px 3px rgb(220, 219, 219);
+  color: rgb(220, 219, 219);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-active {
+  background-color: #00457c !important;
+  color: white;
+  transition: 0.4s;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 100px;
+  padding: 2px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #0c97e8;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* =====loader========= */
+
+.ways-to-send {
+  font-size: 30px;
+  margin-top: 70px;
+}
+
+.invoice {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.invoice-img {
+  width: 25px;
+}
+
+.pay-up-width {
+  width: 70%;
+}
+
+.third-page {
+  margin-top: 50px;
+}
